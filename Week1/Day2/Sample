@@ -1,0 +1,30 @@
+package com.company.exception;
+
+class Calculation{
+	
+	int add(int b, int ...a) {
+		int sum = 0;
+		for(int num: a) {
+			sum += num;
+		}
+		return sum;
+	}
+	int sum(int a[], int b) {
+		int sum = 0;
+		for(int num: a) {
+			sum += num;
+		}
+		sum += b;
+		return sum;
+	}
+	
+}
+public class Practice1 {
+		public static void main(String[] args) {
+			Calculation c1 = new Calculation();
+			System.out.println("Result = " + c1.add(10,20,30));
+			System.out.println();
+			int arr[] =new int[] {10,20,30};
+			System.out.println("Result = " + c1.sum(arr, 100));
+		}
+ }
